@@ -10,7 +10,7 @@ export default function ThankYouPage() {
   const [copied, setCopied] = useState(false);
 
   const paypalLink = "https://www.paypal.me/careloopai/49";
-  const stripeLink = "https://buy.stripe.com/test_bJe4gBee0aXWdyJfHA0Jq01";
+  const stripeLink = "https://buy.stripe.com/14k6recuT8Tkgx2144";
 
   const handleCopy = () => {
     navigator.clipboard.writeText("IT20I0306234210000002460896");
@@ -71,14 +71,19 @@ export default function ThankYouPage() {
               Pay with PayPal
             </a>
 
-            <a
-              href={stripeLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#635bff] text-white font-semibold rounded-xl px-6 py-4 text-center shadow hover:bg-indigo-700 transition duration-200"
-            >
-              Pay with Stripe
-            </a>
+            <div className="flex flex-col items-center">
+              <a
+                href={stripeLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#635bff] text-white font-semibold rounded-xl px-6 py-4 text-center shadow hover:bg-indigo-700 transition duration-200"
+              >
+                Pay with Stripe
+              </a>
+              <span className="mt-1 text-xs text-[#635bff] font-medium">
+                {isItalian ? "Consigliato" : "Recommended"}
+              </span>
+            </div>
 
             <button
               onClick={() => setShowModal(true)}
