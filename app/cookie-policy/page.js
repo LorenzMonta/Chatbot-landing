@@ -23,7 +23,7 @@ export default function CookiePolicy() {
           {isItalian ? "Informativa Cookie" : "Cookie Policy"}
         </h1>
         <p className="mb-8 text-sm text-gray-600 text-center">
-          {isItalian ? "Ultimo aggiornamento: Maggio 2025" : "Last updated: May 2025"}
+          {isItalian ? "Ultimo aggiornamento: 12 Maggio 2025" : "Last updated: May 12, 2025"}
         </p>
 
         <section className="space-y-8 bg-white shadow-sm p-8 rounded-xl">
@@ -60,22 +60,29 @@ export default function CookiePolicy() {
           <div>
             <h2 className="text-xl font-semibold mb-2">5. {isItalian ? "Servizi di terze parti" : "Third-party services"}</h2>
             <p>{isItalian
-              ? "Alcuni cookie sono installati da servizi esterni (es. Google Analytics)."
-              : "Some cookies are installed by third-party services (e.g., Google Analytics)."}</p>
+              ? "Alcuni cookie sono installati da servizi esterni come Google Analytics, che possono raccogliere dati anonimizzati sull’uso del sito."
+              : "Some cookies are installed by third-party services like Google Analytics, which may collect anonymized data about site usage."}</p>
           </div>
 
           <div>
-            <h2 className="text-xl font-semibold mb-2">6. {isItalian ? "Modifiche alla presente policy" : "Changes to this policy"}</h2>
+            <h2 className="text-xl font-semibold mb-2">6. {isItalian ? "Durata dei cookie" : "Cookie Duration"}</h2>
             <p>{isItalian
-              ? "Ci riserviamo il diritto di modificare l’informativa cookie in qualsiasi momento."
-              : "We reserve the right to update this cookie policy at any time."}</p>
+              ? "I cookie possono essere temporanei (sessione) o persistenti (rimangono memorizzati più a lungo sul dispositivo)."
+              : "Cookies may be temporary (session-based) or persistent (stored longer on the device)."}</p>
           </div>
 
           <div>
-            <h2 className="text-xl font-semibold mb-2">7. {isItalian ? "Contatti" : "Contact"}</h2>
+            <h2 className="text-xl font-semibold mb-2">7. {isItalian ? "Modifiche alla presente policy" : "Changes to this policy"}</h2>
             <p>{isItalian
-              ? "Per ulteriori informazioni scrivi a careloop.ai@gmail.com."
-              : "For further information, contact careloop.ai@gmail.com."}</p>
+              ? "Ci riserviamo il diritto di modificare l’informativa cookie in qualsiasi momento. Eventuali modifiche sostanziali saranno comunicate agli utenti."
+              : "We reserve the right to update this cookie policy at any time. Any material changes will be communicated to users."}</p>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-semibold mb-2">8. {isItalian ? "Contatti" : "Contact"}</h2>
+            <p>{isItalian
+              ? "Per ulteriori informazioni o chiarimenti scrivi a info@careloopai.com."
+              : "For further information or clarification, contact info@careloopai.com."}</p>
           </div>
         </section>
       </div>
