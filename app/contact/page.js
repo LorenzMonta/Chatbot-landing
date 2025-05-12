@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import Image from "next/image";
 import logo from "@/public/onlylogo.png";
@@ -9,6 +9,11 @@ export default function ContactPage() {
   const [isItalian, setIsItalian] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
   const form = useRef();
+
+  useEffect(() => {
+    const lang = navigator.language || navigator.userLanguage;
+    setIsItalian(lang.startsWith("it"));
+  }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
